@@ -26,5 +26,9 @@
     <ProjectReference Include="..\Shared\BlazorGameTemplate.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Remove="packages.lock.json" />
+    <None Include="packages.lock.json" />
+  </ItemGroup>
 
 </Project>
