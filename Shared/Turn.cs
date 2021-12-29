@@ -1,6 +1,6 @@
 ﻿namespace BlazorGameTemplate.Shared
 {
-    public class Turn
+    public record Turn
     {
     }
 }
