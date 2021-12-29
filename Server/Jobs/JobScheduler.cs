@@ -6,7 +6,7 @@ namespace BlazorGameTemplate.Server.Jobs
 {
     public class JobScheduler
     {
-        private static readonly StdSchedulerFactory _schedulerFactory = new StdSchedulerFactory();
+        private static readonly StdSchedulerFactory _schedulerFactory = new();
         private readonly IScheduler _scheduler;
 
         private JobScheduler(IScheduler scheduler)

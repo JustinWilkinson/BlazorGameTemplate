@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace BlazorGameTemplate.Shared
 {
-    public class Game
+    public record Game
     {
-        private static readonly Random _random = new Random();
+        private static readonly Random Random = new();
 
         public Guid Id { get; set; }
 

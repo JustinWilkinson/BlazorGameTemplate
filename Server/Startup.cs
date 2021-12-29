@@ -49,9 +49,7 @@ namespace BlazorGameTemplate.Server
 
             // Rate limiter.
             services.AddMemoryCache();
-            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
-            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddInMemoryRateLimiting();
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
         }
 
