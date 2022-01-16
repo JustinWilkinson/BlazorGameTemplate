@@ -422,6 +422,11 @@
           "Newtonsoft.Json": "9.0.1"
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+        "type": "Transitive",
+        "resolved": "1.14.0",
+        "contentHash": "yORzATlNmCp4kEwkxznLZ3maTaUJc5yTcu3aPufY8Tq4141/bRRWsa91u8I24MR3BTCCJlZO98xuQWB4arlKCw=="
+      },
       "Microsoft.Win32.Primitives": {
         "type": "Transitive",
         "resolved": "4.3.0",
@@ -1743,6 +1748,7 @@
           "BlazorGameTemplate.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "6.0.1",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.1",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
           "NLog": "4.7.13",
           "NLog.Config": "4.7.13",
           "NLog.Extensions.Logging": "1.7.4",

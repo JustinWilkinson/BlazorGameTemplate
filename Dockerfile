@@ -8,8 +8,14 @@ WORKDIR /src
 COPY ["Server/BlazorGameTemplate.Server.csproj", "Server/"]
 COPY ["Client/BlazorGameTemplate.Client.csproj", "Client/"]
 COPY ["Shared/BlazorGameTemplate.Shared.csproj", "Shared/"]
-RUN dotnet restore "Server/BlazorGameTemplate.Server.csproj"
+RUN dotnet restore "Server/BlazorGameTemplate.Server.csproj" --locked-mode
 COPY . .
+
+WORKDIR "/src/Client"
+RUN dotnet tool install -g Microsoft.Web.LibraryManager.CLI
+ENV PATH="$PATH:/root/.dotnet/tools"
+RUN libman restore
+
 WORKDIR "/src/Server"
 RUN dotnet build "BlazorGameTemplate.Server.csproj" -c Release -o /app/build
 
